@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h2>Dashboard 📊</h2>
+
+    <canvas id="barChart"></canvas>
+    <br>
+    <canvas id="pieChart"></canvas>
+    <br>
+    <canvas id="lineChart"></canvas>
+
+    <br>
+    <button onclick="logout()">Logout</button>
+</div>
+
+<script>
+// BAR CHART
+new Chart(document.getElementById("barChart"), {
+    type: 'bar',
+    data: {
+        labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+        datasets: [{
+            label: "Sales",
+            data: [12, 19, 8, 15, 10],
+            backgroundColor: [
+                "#4e73df",
+                "#1cc88a",
+                "#36b9cc",
+                "#f6c23e",
+                "#e74a3b"
+            ]
+        }]
+    }
+});
+
+// PIE CHART
+new Chart(document.getElementById("pieChart"), {
+    type: 'pie',
+    data: {
+        labels: ["Product A", "Product B", "Product C"],
+        datasets: [{
+            data: [30, 45, 25],
+            backgroundColor: [
+                "#4e73df",
+                "#1cc88a",
+                "#e74a3b"
+            ]
+        }]
+    }
+});
+
+// LINE CHART
+new Chart(document.getElementById("lineChart"), {
+    type: 'line',
+    data: {
+        labels: ["Mon", "Tue", "Wed", "Thu", "Fri"],
+        datasets: [{
+            label: "Visitors",
+            data: [5, 9, 7, 14, 10],
+            borderColor: "#4e73df",
+            fill: false
+        }]
+    }
+});
+
+function logout(){
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>

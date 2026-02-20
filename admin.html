@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Intelligent White Cane</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Intelligent White Cane - Admin</h1>
+        <button id="logoutBtn">Logout</button>
+    </header>
+
+    <aside class="sidebar">
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Users</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+        <h2>Dashboard</h2>
+        <div class="stats">
+            <div class="card">Total Users: <span id="totalUsers">0</span></div>
+            <div class="card">Active Devices: <span id="activeDevices">0</span></div>
+            <div class="card">Alerts Today: <span id="alertsToday">0</span></div>
+        </div>
+
+        <div class="charts">
+            <h3>User Activity</h3>
+            <div id="chartPlaceholder">[Chart Placeholder]</div>
+        </div>
+
+        <div class="users-table">
+            <h3>Users List</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="userTableBody">
+                    <!-- Rows dynamically added via JS -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
